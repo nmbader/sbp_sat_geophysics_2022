@@ -10,19 +10,19 @@
 #
  2
  0 0
- 5920 0
+ 6000 0
 #
 # interface number 2 (ocean bottom)
 #
  2
     0 2880
- 5920 2880
+ 6000 2880
 #
 # interface number 3 (topography, top of the mesh)
 #
  2
-    0 4000
- 5920 4000
+    0 4080
+ 6000 4080
 #
 # for each layer, we give the number of spectral elements in the vertical direction
 #
@@ -35,4 +35,4 @@
 #
 # layer number 2 (top layer)
 #
- 56
+ 60

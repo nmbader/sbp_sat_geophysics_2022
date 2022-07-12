@@ -257,8 +257,8 @@ interfacesfile                  = INTERFACE.txt
 
 # geometry of the model (origin lower-left corner = 0,0) and mesh description
 xmin                            = 0.d0           # abscissa of left side of the model
-xmax                            = 5920.d0        # abscissa of right side of the model
-nx                              = 296            # number of elements along X
+xmax                            = 6000.d0        # abscissa of right side of the model
+nx                              = 300            # number of elements along X
 
 # absorbing boundary parameters (see absorbing_conditions above)
 absorbbottom                    = .true.
@@ -268,8 +268,8 @@ absorbleft                      = .true.
 
 # define the different regions of the model in the (nx,nz) spectral-element mesh
 nbregions                       = 2              # then set below the different regions and model number for each region
-1 296 1   144 1
-1 296 145 200 2
+1 300 1   144 1
+1 300 145 204 2
 
 #-----------------------------------------------------------------------------
 #

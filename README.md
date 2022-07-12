@@ -1,7 +1,8 @@
 # Geophysics paper 2022: Modeling and inversion in acoustic-elastic coupled media using energy-stable summation-by-parts operators
 
 - [Description](#Description)
-- [Installation](#Installation)
+- [Installation with Docker](#Installation_using_Docker)
+- [Installation without Docker](#Installation_without_a_Docker)
 - [Generating results](#Generating-results)
 
 ## Description

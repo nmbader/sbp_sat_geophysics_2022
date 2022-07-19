@@ -18,16 +18,17 @@ SAVE_FORWARD                    = .false.
 
 # parameters concerning partitioning
 NPROC                           = 1              # number of processes
-partitioning_method             = 3              # SCOTCH = 3, ascending order (very bad idea) = 1
+PARTITIONING_TYPE               = 3              # SCOTCH = 3, ascending order (very bad idea) = 1
 
 # number of control nodes per element (4 or 9)
-ngnod                           = 4
+NGNOD                           = 4
 
 # time step parameters
 # total number of time steps
 NSTEP                           = 5001
 # duration of a time step (see section "How to choose the time step" of the manual for how to do this)
 DT                              = 0.5d-3
+
 
 # time stepping
 # 1 = Newmark (2nd order), 2 = LDDRK4-6 (4th-order 6-stage low storage Runge-Kutta), 3 = classical RK4 4th-order 4-stage Runge-Kutta
@@ -115,6 +116,10 @@ add_Bielak_conditions_left      = .false.
 ACOUSTIC_FORCING                = .false.        # acoustic forcing of an acoustic medium with a rigid interface
 
 
+noise_source_time_function_type = 0
+write_moving_sources_database   = .false.
+APPROXIMATE_HESS_KL             = .false.
+
 #-----------------------------------------------------------------------------
 #
 # receivers
@@ -125,7 +130,7 @@ ACOUSTIC_FORCING                = .false.        # acoustic forcing of an acoust
 seismotype                      = 1              # record 1=displ 2=veloc 3=accel 4=pressure 5=curl of displ 6=the fluid potential
 
 # subsampling of the seismograms to create smaller files (but less accurately sampled in time)
-subsamp_seismos                 = 1
+NTSTEP_BETWEEN_OUTPUT_SAMPLE    = 1
 
 # so far, this option can only be used if all the receivers are in acoustic elements
 USE_TRICK_FOR_BETTER_PRESSURE   = .false.
@@ -133,7 +138,7 @@ USE_TRICK_FOR_BETTER_PRESSURE   = .false.
 # every how many time steps we save the seismograms
 # (costly, do not use a very small value; if you use a very large value that is larger than the total number
 #  of time steps of the run, the seismograms will automatically be saved once at the end of the run anyway)
-NSTEP_BETWEEN_OUTPUT_SEISMOS    = 99999
+NTSTEP_BETWEEN_OUTPUT_SEISMOS   = 99999
 
 # use this t0 as earliest starting time rather than the automatically calculated one
 USER_T0                         = 0.0d0
@@ -172,7 +177,7 @@ record_at_surface_same_vertical = .false.        # receivers inside the medium o
 # save sensitivity kernels in ASCII format (much bigger files, but compatible with current GMT scripts) or in binary format
 save_ASCII_kernels              = .false.
 # since the accuracy of kernel integration may not need to respect the CFL, this option permits to save computing time, and memory with UNDO_ATTENUATION_AND_OR_PML mode
-NSTEP_BETWEEN_COMPUTE_KERNELS   = 1
+NTSTEP_BETWEEN_COMPUTE_KERNELS  = 1
 
 
 #-----------------------------------------------------------------------------
@@ -278,7 +283,7 @@ nbregions                       = 2              # then set below the different 
 #-----------------------------------------------------------------------------
 
 # every how many time steps we display information about the simulation (costly, do not use a very small value)
-NSTEP_BETWEEN_OUTPUT_INFO       = 500
+NTSTEP_BETWEEN_OUTPUT_INFO      = 500
 
 # meshing output
 output_grid_Gnuplot             = .false.        # generate a GNUPLOT file containing the grid, and a script to plot it
@@ -303,7 +308,7 @@ COMPUTE_INTEGRATED_ENERGY_FIELD = .false.
 
 # every how many time steps we draw JPEG or PostScript pictures of the simulation
 # and/or we dump results of the simulation as ASCII or binary files (costly, do not use a very small value)
-NSTEP_BETWEEN_OUTPUT_IMAGES     = 500
+NTSTEP_BETWEEN_OUTPUT_IMAGES    = 500
 
 # minimum amplitude kept in % for the JPEG and PostScript snapshots; amplitudes below that are muted
 cutsnaps                        = 1.

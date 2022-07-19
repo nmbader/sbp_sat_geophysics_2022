@@ -16,3 +16,5 @@ Mxx                             = 1.              # Mxx component (for a moment 
 Mzz                             = 1.              # Mzz component (for a moment tensor source only)
 Mxz                             = 0.              # Mxz component (for a moment tensor source only)
 factor                          = 1.            # amplification factor
+dummy1                          = 0
+dummy2                          = 0

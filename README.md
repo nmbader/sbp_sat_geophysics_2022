@@ -35,7 +35,7 @@ jupyter notebook --ip 0.0.0.0 --port 8080 --no-browser --allow-root &
 
 Open the browser at *localhost:8080/​* and use the printed token above to authenticate.
 
-The image will build **fwi2d** and **SPECFEM2D** libraries in single precision.
+The docker image will build **fwi2d** and **SPECFEM2D** libraries in single precision.
 
 ## Installation without a Docker
 
@@ -53,8 +53,10 @@ git checkout 1b20e7ee0bbe06eb43cbee18c91d7ed29809a8e4
 ```
 Follow the instructions in the README of the software.
 
-Finally, install [**SPECFEM2D**](https://github.com/geodynamics/specfem2d) at a location of your choice and copy (or create symbolic links) the two executables *xmeshfem2D* and *xspecfem2d*  into the folder *./sbp_sat_geophysics_2022/specfem2d*.
+Install [**SPECFEM2D**](https://github.com/geodynamics/specfem2d) at a location of your choice and copy (or create symbolic links) the two executables *xmeshfem2D* and *xspecfem2d*  into the folder *./sbp_sat_geophysics_2022/specfem2d*.
+
+Finally, install [**Devito**](https://github.com/devitocodes/devito) at a location of your choice and add the appropriate path to the python path.
 
 ## Generating results
 
-Follow the instructions and run the three [notebooks](https://github.com/nmbader/sbp_sat_geophysics_2022/tree/master/notebooks) in order to generate the results and figures of the paper.
+Follow the instructions and run the [notebooks](https://github.com/nmbader/sbp_sat_geophysics_2022/tree/master/notebooks) in the given numbering order to generate the results and figures of the paper.

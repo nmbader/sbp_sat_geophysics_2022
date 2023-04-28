@@ -1,4 +1,4 @@
-# Geophysics paper 2022: Modeling and inversion in acoustic-elastic coupled media using energy-stable summation-by-parts operators
+# Geophysics paper 2023: Modeling and inversion in acoustic-elastic coupled media using energy-stable summation-by-parts operators
 
 - [Description](#Description)
 - [Installation with Docker](#Installation-using-Docker)
@@ -7,7 +7,7 @@
 
 ## Description
 
-This project aims at reproducing the results shown in the journal article "**Modeling and inversion in acoustic-elastic coupled media using energy-stable summation-by-parts operators**" submitted to **Geophysics** in 2022. The authors of the article are *Milad Bader, Martin Almquist,* and *Eric M. Dunham*.
+This project aims at reproducing the results shown in the journal article: Milad Bader, Martin Almquist, Eric M. Dunham; Modeling and inversion in acoustic-elastic coupled media using energy-stable summation-by-parts operators. *Geophysics* 2023; doi: https://doi.org/10.1190/geo2022-0195.1
 
 ## Installation using Docker
 

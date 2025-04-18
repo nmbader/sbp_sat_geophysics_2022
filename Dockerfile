@@ -26,12 +26,14 @@ WORKDIR /home
 RUN cd /opt &&\
     git clone --recursive --branch devel https://github.com/geodynamics/specfem2d.git &&\
     cd /opt/specfem2d  &&\
+    git checkout 7e019b622587b3abce752c6ebb0ec1033de8d848 &&\
     ./configure FC=gfortran CC=gcc &&\
     make
 
 RUN cd /opt &&\
     git clone https://github.com/devitocodes/devito.git &&\
     cd devito &&\
+    git checkout 692d85edef19cbe27e0a92857ee74ea99f52ace4 &&\
     rm -rf .git &&\
     python3 -m pip install --no-cache-dir -e /opt/devito[extras]
     
